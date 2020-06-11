@@ -85,21 +85,18 @@ class WaveMini():
 
 class CurrentValues():
 
-    def __init__(self, temperature, pressure, humidity, voc):
+    def __init__(self, temperature, humidity, voc):
         self.temperature = temperature  #: Temperature in degree Celsius
-        self.pressure = pressure  #: Pressure in hPa
         self.humidity = humidity  #: Humidity in %rH
         self.voc = voc  #: Volatile Organic Compounds in ppm
 
     @classmethod
     def from_bytes(cls, rawdata):
         data = struct.unpack("<HHHHHHLL", rawdata)
-
-        return cls(round(data[1]/100.0 - 273.15, 2), data[2]/50.0, data[3]/100.0, data[4])
+        return cls(round(data[1]/100.0 - 273.15, 2), data[3]/100.0, data[4])
 
     def __str__(self):
         msg = "Temperature: {} *C, ".format(self.temperature)
-        msg += "Pressure: {} hPa, ".format(self.pressure)
         msg += "Humidity: {} %rH, ".format(self.humidity)
         msg += "VOC: {} ppm".format(self.voc)
         return msg

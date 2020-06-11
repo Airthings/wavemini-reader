@@ -1,8 +1,8 @@
 # Airthings Wave Mini Sensor Reader
 
-Airthings Wave Mini includes sensors for temperature, pressure, humidity and volatile organic compounds (VOC) measurements. Additionally, you can simply wave in front of the device to get a visual indication of your indoor air quality.
+Airthings Wave Mini includes sensors for temperature, humidity and volatile organic compounds (VOC) measurements. Additionally, you can simply wave in front of the device to get a visual indication of your indoor air quality.
 
-This is a project to provide users a starting point (```read_wavemini.py``` to read current sensor values from a [Airthings Wave Mini](https://www.airthings.com/no/wave-mini) devices using a Raspberry Pi 3 Model B over Bluetooth Low Energy (BLE).
+This is a project to provide users a starting point (```read_wavemini.py```) to read current sensor values from a [Airthings Wave Mini](https://www.airthings.com/no/wave-mini) devices using a Raspberry Pi 3 Model B over Bluetooth Low Energy (BLE).
 
 **Table of contents**
 
@@ -135,10 +135,10 @@ text-file using ```> somefile.txt```. Exit the script using ```Ctrl+C```.
 
 Example output:
 ```
-Temperature: 27.33 *C, Pressure: 998.56 hPa, Humidity: 25.51 %rH, VOC: 48 ppm
-Temperature: 27.33 *C, Pressure: 998.56 hPa, Humidity: 25.51 %rH, VOC: 48 ppm
-Temperature: 27.33 *C, Pressure: 998.56 hPa, Humidity: 25.51 %rH, VOC: 48 ppm
-Temperature: 27.33 *C, Pressure: 998.56 hPa, Humidity: 25.51 %rH, VOC: 48 ppm
+Temperature: 27.33 *C, Humidity: 25.51 %rH, VOC: 48 ppm
+Temperature: 27.33 *C, Humidity: 25.51 %rH, VOC: 48 ppm
+Temperature: 27.33 *C, Humidity: 25.51 %rH, VOC: 48 ppm
+Temperature: 27.33 *C, Humidity: 25.51 %rH, VOC: 48 ppm
 ```
 
 > **Note**: The scripts require that your device is advertising. If your device is paired/connected to e.g. a phone, you need to turn off bluetooth on your phone while using the scripts.
@@ -152,7 +152,6 @@ Sensor values are updated every 5 minutes.
 | sensor                        | units               |
 |-------------------------------|---------------------|
 | Temperature                   | &deg;C              |
-| Pressure                      | hPa                 |
 | Humidity                      | %rH                 |
 | VOC                           | ppm                 |
 
